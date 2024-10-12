@@ -132,14 +132,28 @@ The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multi
 
 </li>
 
+<li><strong>MongoDB Connection and Insertion Errors:</strong> MongoDB operations, such as inserting document summaries and keywords, may fail if the database is not reachable or there is a data format issue.
 
+<ul>
+<li>**Connection errors:** If MongoDB is down or unreachable, the error will be caught, logged, and the program will continue processing other PDFs.</li>
+<li>**Data insertion errors:** If there is an issue with inserting the document metadata into MongoDB, the error will be logged without terminating the entire pipeline.</li>
+<li>**Error Logging:** Errors related to MongoDB connectivity or data insertion will be logged without stopping the processing of other documents.</li>
+</ul>
 
-<li><strong></strong></li>
-<li><strong></strong></li>
+</li>
 
-<li><strong></strong></li>
+<li><strong>Performance Monitoring Errors:</strong> When monitoring system performance (CPU, memory), the `psutil` library is used. If the monitoring fails due to system limitations, the error is logged.
+
+<ul>
+<li>**Handling Missing Permissions:** If `psutil` cannot access system metrics due to missing permissions, the error is caught and logged.</li>
+</ul>
+ 
+</li>
+
 
 </ol>
+
+
 ### - Performance Metrics
 The system tracks:
 
