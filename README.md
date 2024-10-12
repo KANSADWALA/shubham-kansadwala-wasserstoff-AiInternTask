@@ -117,10 +117,23 @@ The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multi
     <ul>
 <li>**Invalid URL**: If the URL is invalid or the server is down, the error is caught and logged.</li>
 <li>**Connection errors**: If the request to the server fails, the error is logged, and processing continues without terminating the entire pipeline.</li>
+<li>**Error Logging**: If an error occurs, it prints a detailed error message but continues to process other files.</li>
     </ul>
 </li>
     
-<li><strong></strong></li>
+<li><strong>PDF Processing Errors:</strong> The `parse_pdf` function processes each PDF, and errors may arise during text extraction (e.g., corrupted PDFs).
+
+<ul>
+<li>**Corrupted PDFs:** If a PDF is corrupted or unreadable by pdfminer.six, the error is caught, and the system skips the problematic file.</li>
+<li>**Empty PDFs:** If a PDF contains no text, the error can be logged, and the file is skipped.</li>
+<li>**Empty PDF Handling:** If no text is found, it raises a ValueError and logs the issue.</li>
+<li>**General Errors:** A general Exception is caught to handle any unforeseen errors during text extraction or MongoDB updates.</li>
+</ul>
+
+</li>
+
+
+
 <li><strong></strong></li>
 <li><strong></strong></li>
 
