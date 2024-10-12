@@ -68,7 +68,7 @@ python -m nltk.downloader punkt stopwords
 
 ## Explaination of the full solution
 
-### PDF Summarization:
+### - PDF Summarization:
 
 The TextRank-inspired algorithm for summarization is an extractive summarization technique. It identifies and selects the most important sentences from the document based on the importance of the words they contain. The algorithm relies on word frequency to determine sentence importance, similar to how the PageRank algorithm ranks web pages.
 
@@ -82,20 +82,28 @@ Words that occur more frequently in the document are considered more important.<
 <li><strong>Summary Generation:</strong> The top N sentences are selected as the summary of the document.</li>
 </ol>
 
-### Keywords Extraction:
+### - Keywords Extraction:
 
 TF-IDF (Term Frequency-Inverse Document Frequency) is a statistical measure used to evaluate the importance of a word in a document relative to a collection of documents. In your system, TF-IDF is used to extract the most relevant keywords from each document.
 
-### Why Why These Techniques (TextRank-inspired algorithm & TF-IDF) Were Chosen:
+### - Why Why These Techniques (TextRank-inspired algorithm & TF-IDF) Were Chosen:
 
 - **Efficiency**: Both algorithms are computationally efficient, avoiding the need for heavy pre-trained models or external libraries. This makes them suitable for batch processing of multiple PDFs.
 - **Scalability**: The TextRank-inspired summarization and TF-IDF keyword extraction are scalable to handle large documents and concurrent processing.
 - **Interpretability**: The results (summaries and keywords) are easy to understand and trace back to specific words or sentences in the original text, which makes these methods transparent and explainable.
 
 
+### - MongoDB Integration:
+After processing, the system stores the filename, summary, keywords, and other metadata in MongoDB.
 
+### - Concurrency:
+The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multiple PDFs concurrently, improving processing speed.
 
+### - Performance Metrics
+The system tracks:
 
+- Total time taken to process all PDFs.
+- Resource usage (CPU, memory) using the `psutil` library.
 
 
 
