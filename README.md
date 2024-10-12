@@ -30,40 +30,39 @@ This project is designed to automatically summarize PDF documents and extract im
 
 ## Setup Instructions
 
-### 1. Clone the repository
-
 <ol>
-    <li><strong>Clone the Repository:</strong>
+    <li><strong>Clone the repository:</strong>
         <pre><code class="bash">
 git clone https://github.com/yourusername/yourrepository.git
 cd yourrepository 
         </code></pre>
     </li>
 
-### 2. Install Python dependencies
-  
-  <li><strong>Clone the Repository:</strong>
+<li><strong>Install Python dependencies:</strong>
         <pre><code class="bash">
 pip install -r requirements.txt
         </code></pre>
     </li>
 
-
-```bash```
-
-### 3.  Download NLTK Data
-```bash```
+<li><strong>Download NLTK Data:</strong>
+        <pre><code class="bash">
 python -m nltk.downloader punkt stopwords
+        </code></pre>
+    </li>
 
-### 4. Set Up MongoDB
-<ul>
+<li><strong>Set Up MongoDB:</strong>
+       <ul>
   <li>Ensure MongoDB is running either locally or via a remote service (e.g., MongoDB Atlas).</li>>
   <li>Update the connection URI in the script.</li>
-</ul>
+       </ul>
+</li>
 
+<li><strong>Run the System:</strong>
+    To run the main pipeline and process PDFs:
+<pre><code class="bash">
+       python app.py        
+       </code></pre>
+</li>
 
-### 5. Run the System
-To run the main pipeline and process PDFs:
-```bash```
-python app.py
+</ol>
 
