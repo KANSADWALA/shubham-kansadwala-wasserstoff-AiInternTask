@@ -1,6 +1,6 @@
 # shubham-kansadwala-wasserstoff-AiInternTask
 
-# Summarization & Keyword Extraction System
+# PDF Summarization & Keyword Extraction System
 
 ## Project Overview
 This project is designed to automatically summarize PDF documents and extract important keywords. It processes multiple PDFs concurrently, stores results in MongoDB, and includes performance benchmarking to evaluate the system's efficiency.
@@ -31,6 +31,27 @@ This project is designed to automatically summarize PDF documents and extract im
 ## Setup Instructions
 
 ### 1. Clone the repository
-```bash
+```bash```
 git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
+cd yourrepository 
+
+### 2. Install Python dependencies
+```bash```
+pip install -r requirements.txt
+
+### 3.  Download NLTK Data
+```bash```
+python -m nltk.downloader punkt stopwords
+
+### 4. Set Up MongoDB
+<ul>
+  <li>Ensure MongoDB is running either locally or via a remote service (e.g., MongoDB Atlas).</li>>
+  <li>Update the connection URI in the script.</li>
+</ul>
+
+
+### 5. Run the System
+To run the main pipeline and process PDFs:
+```bash```
+python app.py
+
