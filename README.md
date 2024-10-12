@@ -97,7 +97,7 @@ Words that occur more frequently in the document are considered more important.<
 
 TF-IDF (Term Frequency-Inverse Document Frequency) is a statistical measure used to evaluate the importance of a word in a document relative to a collection of documents. In your system, TF-IDF is used to extract the most relevant keywords from each document.
 
-### - Why Why These Techniques (TextRank-inspired algorithm & TF-IDF) Were Chosen:
+### - Why These Techniques (TextRank-inspired algorithm & TF-IDF) Were Chosen:
 
 - **Efficiency**: Both algorithms are computationally efficient, avoiding the need for heavy pre-trained models or external libraries. This makes them suitable for batch processing of multiple PDFs.
 - **Scalability**: The TextRank-inspired summarization and TF-IDF keyword extraction are scalable to handle large documents and concurrent processing.
