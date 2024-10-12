@@ -52,7 +52,7 @@ python -m nltk.downloader punkt stopwords
 
 <li><strong>Set Up MongoDB:</strong>
        <ul>
-  <li>Ensure MongoDB is running either locally or via a remote service (e.g., MongoDB Atlas).</li>>
+  <li>Ensure MongoDB is running either locally or via a remote service (e.g., MongoDB Atlas).</li>
   <li>Update the connection URI in the script.</li>
        </ul>
 </li>
