@@ -1,6 +1,6 @@
 # shubham-kansadwala-wasserstoff-AiInternTask
 
-# PDF Summarization & Keyword Extraction Pipeline
+# Domain-Specific PDF Summarization & Keyword Extraction Pipeline
 
 ## Project Overview
 This project is designed to automatically summarize PDF documents and extract important keywords. It processes multiple PDFs concurrently, stores results in MongoDB, and includes performance benchmarking to evaluate the system's efficiency.
