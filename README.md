@@ -114,9 +114,10 @@ The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multi
 
 <ol>
 <li><strong>Download PDF Errors:</strong> The function `download_pdf` handles errors that may occur during the download of PDFs, such as an invalid URL or a failed HTTP request.
-<li>Errors handled:
-- **Invalid URL**: If the URL is invalid or the server is down, the error is caught and logged.
-- **Connection errors**: If the request to the server fails, the error is logged, and processing continues without terminating the entire pipeline.</li>
+    <ul>
+<li>**Invalid URL**: If the URL is invalid or the server is down, the error is caught and logged.</li>
+<li>**Connection errors**: If the request to the server fails, the error is logged, and processing continues without terminating the entire pipeline.</li>
+    </ul>
 </li>
     
 <li><strong></strong></li>
