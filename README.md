@@ -11,6 +11,17 @@ This project is designed to automatically summarize PDF documents and extract im
 - **MongoDB Integration**: Stores metadata, summaries, and keywords in MongoDB.
 - **Concurrency**: Handles multiple PDFs concurrently to improve performance.
 
+## Dependencies Used
+
+- **nltk**: Natural Language Toolkit for tokenization and stopwords.
+- **pdfminer.six**: For extracting text from PDF files.
+- **requests**: For handling HTTP requests to download PDF files.
+- **concurrent.futures**: For managing parallel processing.
+- **scikit-learn**: Provides TfidfVectorizer and cosine_similarity for keyword extraction and sentence ranking.
+- **numpy**: For numerical operations used in vectorization.
+- **pymongo**: MongoDB client for storing results.
+- **psutil**: For tracking system resource usage (CPU, memory).
+
 ## System Requirements
 
 ### Hardware:
