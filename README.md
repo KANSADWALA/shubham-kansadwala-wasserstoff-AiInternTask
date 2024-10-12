@@ -120,21 +120,6 @@ The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multi
 <li>**Error Logging**: If an error occurs, it prints a detailed error message but continues to process other files.</li>
     </ul>
 
-<pre><code class="python">
-       def download_pdf(pdf_url, output_dir, pdf_name):
-        try:
-            response = requests.get(pdf_url)
-            response.raise_for_status()  # Raises an HTTPError for bad responses
-            pdf_path = os.path.join(output_dir, f"{pdf_name}.pdf")
-            with open(pdf_path, 'wb') as file:
-                file.write(response.content)
-            print(f"Downloaded: {pdf_path}")
-            return pdf_path
-        except requests.exceptions.RequestException as e:
-            print(f"Error downloading {pdf_url}: {e}")
-            return None
-       
-       </code></pre>
 </li>
 
 <br>
