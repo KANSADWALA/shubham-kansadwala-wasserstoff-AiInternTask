@@ -74,10 +74,10 @@ The TextRank-inspired algorithm for summarization is an extractive summarization
 
 Steps:
 <ol>
-<li>**Tokenization:** The input text is broken down into sentences and individual words using NLTK.</li>
-<li>**Word Frequency Calculation:** A frequency distribution is created for the words in the document (excluding stopwords).
+<li><strong>Tokenization:</strong> The input text is broken down into sentences and individual words using NLTK.</li>
+<li><strong>Word Frequency Calculation:</strong> A frequency distribution is created for the words in the document (excluding stopwords).
 Words that occur more frequently in the document are considered more important.</li>
-<li>**Sentence Scoring:** Each sentence is scored based on the sum of the word frequencies of the words it contains. Sentences with higher scores are considered more relevant.</li>
-<li>**Sentence Ranking:** The sentences are sorted in descending order of their scores.</li>
-<li>**Summary Generation:** The top N sentences are selected as the summary of the document.</li>
+<li><strong>Sentence Scoring:</strong>Each sentence is scored based on the sum of the word frequencies of the words it contains. Sentences with higher scores are considered more relevant.</li>
+<li><strong>Sentence Ranking:</strong> The sentences are sorted in descending order of their scores.</li>
+<li><strong>Summary Generation:</strong> The top N sentences are selected as the summary of the document.</li>
 </ol>
