@@ -110,6 +110,22 @@ After processing, the system stores the filename, summary, keywords, and other m
 ### - Concurrency:
 The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multiple PDFs concurrently, improving processing speed.
 
+### - Error Handling:
+
+<ol>
+<li><strong>Download PDF Errors:</strong> The function `download_pdf` handles errors that may occur during the download of PDFs, such as an invalid URL or a failed HTTP request.
+#### Errors handled:
+- **Invalid URL**: If the URL is invalid or the server is down, the error is caught and logged.
+- **Connection errors**: If the request to the server fails, the error is logged, and processing continues without terminating the entire pipeline.
+</li>
+    
+<li><strong></strong></li>
+<li><strong></strong></li>
+<li><strong></strong></li>
+
+<li><strong></strong></li>
+
+</ol>
 ### - Performance Metrics
 The system tracks:
 
