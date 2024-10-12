@@ -120,7 +120,9 @@ The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multi
 <li>**Error Logging**: If an error occurs, it prints a detailed error message but continues to process other files.</li>
     </ul>
 </li>
-    
+
+<br>
+
 <li><strong>PDF Processing Errors:</strong> The `parse_pdf` function processes each PDF, and errors may arise during text extraction (e.g., corrupted PDFs).
 
 <ul>
@@ -132,6 +134,8 @@ The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multi
 
 </li>
 
+<br>
+
 <li><strong>MongoDB Connection and Insertion Errors:</strong> MongoDB operations, such as inserting document summaries and keywords, may fail if the database is not reachable or there is a data format issue.
 
 <ul>
@@ -141,6 +145,8 @@ The system uses Python's `concurrent.futures.ThreadPoolExecutor` to handle multi
 </ul>
 
 </li>
+
+<br>
 
 <li><strong>Performance Monitoring Errors:</strong> When monitoring system performance (CPU, memory), the `psutil` library is used. If the monitoring fails due to system limitations, the error is logged.
 
